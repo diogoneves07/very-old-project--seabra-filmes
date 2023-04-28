@@ -1,0 +1,1 @@
+<?php exit(header("location: ../files-Sistem/sistem-seabra-filmes.php")); ?>

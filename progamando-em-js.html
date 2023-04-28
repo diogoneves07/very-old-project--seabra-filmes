@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .e{
+            position: absolute;
+            top:200px;
+            left:330px;
+            border: 1px solid red;
+           
+        }
+        .e button{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="e">
+
+    </div>
+    <script>
+        
+    document.getElementsByTagName("div")[0].insertAdjacentHTML("beforeend","<button>JavaScript ( <result>0</result> )</button><button>PHP ( <result>0</result> )</button><button>Python ( <result>0</result> )</button><button>C# ( <result>0</result> )</button><button>PERL ( <result>0</result> )</button>");
+
+    document.onclick=function(event)
+    {
+        var element=event.target;
+        if(element.nodeName=="BUTTON")
+        {
+            var resultElement=element.children[0];
+            var stringInResult = parseInt(resultElement.innerText)+1;
+            resultElement.innerText = stringInResult;
+        }
+
+    }
+    </script>
+    
+</body>
+</html>
